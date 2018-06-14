@@ -1,0 +1,9 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: 'PT Sans', sans-serif; }
+
+.menu ul li {
+  color: white; }
+  .menu ul li a {
+    color: red; }
