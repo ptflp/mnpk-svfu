@@ -35,13 +35,13 @@ p {
 	color: $main;
 	font-size: 26pt;
 	margin-top: 13px;
-	margin-bottom: 13px;
+	margin-bottom: 0;
 }
 .textr {
 	font-size: 16pt;
 	padding-top: 0px;
 	margin-top: 13px;
-	margin-bottom: 13px;
+	margin-bottom: 0;
 }
 .subp{
 	margin: 0;
@@ -157,6 +157,16 @@ section {
 		padding-top: 0;
 		margin:5px;
 		text-align: start;
+	}
+	ul {
+	    list-style: none;
+     	padding: 5px;
+	}
+
+	ul li:before {
+	    content:  "—";
+	    position: relative;
+	    left:     -5px;
 	}
 	h2 {
 		font-size: 13pt;
