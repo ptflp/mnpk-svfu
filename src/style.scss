@@ -1,7 +1,8 @@
 $main: #1F4E79;
 $primary: #2F5597;
 $border1: #0070C0;
-$border1: #DEEBF7;
+$border2: #DEEBF7;
+$border3: #AFABAB;
 html,body {
 	padding: 0;
 	margin: 0;
@@ -95,7 +96,7 @@ p {
     flex-wrap: wrap;
     padding: 0;
     margin: 0;
-    & > .col-2, .col-8, .col-3 {
+    & > .col-2, .col-8, .col-7, .col-3, .col-3-3, .col-6-6 {
      		position: relative;
 		    position: relative;
 		    width: 100%;
@@ -115,7 +116,14 @@ p {
 	    flex: 0 0 80%;
 	    max-width: 80%;
     }
-    & > .col-3 {
+    & > .col-7 {
+	    -webkit-box-flex: 0;
+	    -webkit-flex: 0 0 70%;
+	    -ms-flex: 0 0 70%;
+	    flex: 0 0 70%;
+	    max-width: 70%;
+    }
+    & > .col-3-3 {
 	    -webkit-box-flex: 0;
 	    -webkit-flex: 0 0 33.3332%;
 	    -ms-flex: 0 0 33.3332%;
@@ -123,20 +131,60 @@ p {
 	    max-width: 33.3332%;
 
     }
+    & > .col-6-6 {
+	    -webkit-box-flex: 0;
+	    -webkit-flex: 0 0 66.6666%;
+	    -ms-flex: 0 0 66.6666%;
+	    flex: 0 0 66.6666%;
+	    max-width: 66.6666%;
+
+    }
+    & > .col-3 {
+	    -webkit-box-flex: 0;
+	    -webkit-flex: 0 0 30%;
+	    -ms-flex: 0 0 30%;
+	    flex: 0 0 30%;
+	    max-width: 30%;
+
+    }
 }
 section {
+	padding-top: 0px;
+	padding-bottom: 8px;
+	margin-top: 8px;
 	h1,h2,h3 {
-		padding:8px;
-		margin:0;
+		padding:5px;
+		padding-top: 0;
+		margin:5px;
 		text-align: start;
 	}
 	h2 {
 		font-size: 13pt;
 	}
 	p {
+		text-indent: 0px;
 		margin-top: 0;
-		padding-top: 0;
+		margin-bottom:0;
+		padding-top: 5px;
+		padding-bottom:0;
+    	text-align: start;
+    	font-size: 11pt
 	}
+}
+.pt-8 {
+	padding-top: 8px;
+}
+.indent {
+	text-indent: 21px;
+	& > h1,h2,h3,p {		
+		text-indent: 21px;
+	}
+}
+.indent-none {	
+	text-indent: 0px;
+}
+.color-primary {
+	color: $main;
 }
 .border-primary {
 	border-left-color: $border1 !important;
@@ -145,6 +193,14 @@ section {
 }
 .border-light {
 	border-left-color: $border2 !important;
+	border-left-width: 13px !important;
+    border-left-style: solid !important;
+}
+.bg-light {
+	background-color: $border2;
+}
+.border-gray {
+	border-left-color: $border3 !important;
 	border-left-width: 13px !important;
     border-left-style: solid !important;
 }
@@ -169,4 +225,7 @@ section {
 			}
 		}
 	}
+}
+.text-center {
+	text-align: center;
 }
